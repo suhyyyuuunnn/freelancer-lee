@@ -83,12 +83,11 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'HOST': 'dbdb.ctpbbzmmnq3x.ap-northeast-2.rds.amazonaws.com',
         'PORT': '5432',
-        'NAME': 'dbdb',
-        'USER': 'postgre_lee',
-        'PASSWORD': 'dduhyun04261216!',
+        'NAME': os.environ['dbdb'],
+        'USER': os.environ['postgre_lee'],
+        'PASSWORD': os.environ['dduhyun04261216!'],
     }
 }
-
 
 
 # Password validation
