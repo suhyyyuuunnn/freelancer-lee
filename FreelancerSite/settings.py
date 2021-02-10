@@ -79,12 +79,8 @@ WSGI_APPLICATION = 'FreelancerSite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'dbdb.ctpbbzmmnq3x.ap-northeast-2.rds.amazonaws.com',
-        'PORT': '5432',
-        'NAME': os.environ['dbdb'],
-        'USER': os.environ['postgre_lee'],
-        'PASSWORD': os.environ['dduhyun04261216!'],
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
