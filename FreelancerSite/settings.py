@@ -30,7 +30,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "dduhyun.gabia.io",
     "localhost",
-    "0.0.0.0"
+    "0.0.0.0",
+    "web",
 ]
 
 # Application definition
