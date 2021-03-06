@@ -4,7 +4,7 @@ from django.urls import reverse
 
 class Post(models.Model):
     class Meta:
-        ordering = ['-updated_at']
+        ordering = ['-created_at']
 
     POST_TYPE = [
         (0, "해킹"),

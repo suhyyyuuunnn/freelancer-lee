@@ -87,12 +87,12 @@
 
 
     <div class="row">
-      {% for post in post_sorted3 %}
+      {% for post in posts %}
               <div class="col-md-4 mb-5">
                 <div class="card h-100">
                   <div class="card-body">
                     <h2 class="card-title">{{ post.title }}</h2>
-                    <p class="card-text">{{ post.content|safe }}</p>
+                    <p class="card-text">{{ post.content|safe |slice:'20' }}</p>
                   </div>
                   <div class="card-footer">
                     <a href="{{ post.get_absolute_url }}" class="btn btn-primary btn-sm" style="color: #f7f7f7; background-color: #545b62; border-color: #4e555b;">상세보기</a>
@@ -145,6 +145,15 @@
   <!-- Bootstrap core JavaScript -->
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script>
+      $r_text = $content->content_text;
+      if (!empty($r_text)){
+                // 본문 내용을 텍스트만 일부 표시하려는 경우 태그 제거
+        $r_text = strip_tags($r_text);
+      }else{
+        $r_text = "";
+      }
+  </script>
 
 </body>
 

@@ -27,7 +27,11 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 's_+pea57zp@7&$om(@9mjl6_9h2+@u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    "dduhyun.gabia.io",
+    "localhost",
+    "0.0.0.0"
+]
 
 # Application definition
 
@@ -79,8 +83,12 @@ WSGI_APPLICATION = 'FreelancerSite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dbdduhyun',
+        'USER': 'dduhyun',
+        'PASSWORD': 'hongyul2021!',
+        'HOST': 'db.dduhyun.gabia.io',
+        'PORT': 5432,
     }
 }
 
